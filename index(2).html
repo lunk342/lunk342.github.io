@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+
+                <a class="header-logotype" href="https://codologia35.ru/">
+                    <img src="./assets/images/logotype.svg" alt="">
+                </a>
+
+                <div class="header-menu">
+
+                    <a href="#product" class="header-link">Товары</a>
+                    <a href="#seo" class="header-link">Новинки</a>
+                    <a href="#footer" class="header-link">О нас</a>
+
+                    <a href="" class="header-link cart">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_1_144)">
+                                <path
+                                    d="M9.24998 21.1667C9.75624 21.1667 10.1666 20.7563 10.1666 20.25C10.1666 19.7437 9.75624 19.3333 9.24998 19.3333C8.74372 19.3333 8.33331 19.7437 8.33331 20.25C8.33331 20.7563 8.74372 21.1667 9.24998 21.1667Z"
+                                    stroke="#2C2D35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M19.3334 21.1667C19.8396 21.1667 20.25 20.7563 20.25 20.25C20.25 19.7437 19.8396 19.3333 19.3334 19.3333C18.8271 19.3333 18.4167 19.7437 18.4167 20.25C18.4167 20.7563 18.8271 21.1667 19.3334 21.1667Z"
+                                    stroke="#2C2D35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M1.91669 1.91666H5.58335L8.04002 14.1908C8.12384 14.6129 8.35344 14.992 8.6886 15.2618C9.02377 15.5316 9.44316 15.6749 9.87335 15.6667H18.7834C19.2135 15.6749 19.6329 15.5316 19.9681 15.2618C20.3033 14.992 20.5329 14.6129 20.6167 14.1908L22.0834 6.49999H6.50002"
+                                    stroke="#2C2D35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_1_144">
+                                    <rect width="22" height="22" fill="white" transform="translate(1 1)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        <div class="header__counter">
+                            1
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="banner">
+        <div class="banner__background swiper slider-banner">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Moench_2339.jpg/1200px-Moench_2339.jpg"
+                        alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="data:image/jpeg;base64,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"
+                        alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://alexclimb.com/_userfile/dykhtau_2023_1.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="banner__inner">
+
+                <div class="banner__image">
+                    <img src="./assets/images/rock.svg">
+                </div>
+
+                <div class="banner__content">
+
+                    <div class="banner__title">
+                        Магия в <br> <span> Лавке Чародея </span>
+                    </div>
+
+                    <div class="banner__discription">
+                        Лучшие магические товары во всем мире. По низким ценам. Для детей и их родителей скидки!
+                    </div>
+                    <button class="banner__link">Продукция</button>
+
+                    <div class="banner__arrows">
+                        <div class="arrow arrow_left">
+                            <svg width="17" height="10" viewBox="0 0 17 10" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.59952 9L1.34224 5M1.34224 5L4.59952 1M1.34224 5L16 5" stroke="white"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="arrow arrow_right">
+                            <svg width="17" height="10" viewBox="0 0 17 10" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.4005 1L15.6578 5M15.6578 5L12.4005 9M15.6578 5H1" stroke="white"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div id="product" class="products">
+        <div class="container">
+            <div class="products__inner">
+
+                <div class="products__head">
+
+                    <div class="products__title">Товары Чародея</div>
+
+                    <div class="products__tabs">
+
+                        <a href="javascript:void(0)" class="tab-product active">Кристаллы</a>
+                        <a href="javascript:void(0)" class="tab-product">Украшения</a>
+                        <a href="javascript:void(0)" class="tab-product">Палочки</a>
+
+                    </div>
+
+                </div>
+
+                <div class="products__list">
+
+                    <div class="products__grid active">
+                        <div class="card-product">
+                            <div class="card-product__image">
+                                <img src="./assets/images/product 1.png" alt="">
+                            </div>
+                            <div class="card-product__content">
+
+                                <div class="card-product__mark">Кристалл</div>
+                                <div class="card-product__title">Сапфир исцеления</div>
+                                <div class="card-product__subtitle">Ваша информация о товаре</div>
+                                <div class="card-product__price">14 500 руб</div>
+                                <a href="javascript:void(0)" class="card-product__link">В корзину</a>
+                            </div>
+                        </div>
+                        <div class="card-product">
+                            <div class="card-product__image">
+                                <img src="./assets/images/product  2.png" alt="">
+                            </div>
+                            <div class="card-product__content">
+
+                                <div class="card-product__mark">Кристалл</div>
+                                <div class="card-product__title">Обсидиан счастья</div>
+                                <div class="card-product__subtitle">Ваша информация о товаре</div>
+                                <div class="card-product__price">16 500 руб</div>
+                                <a href="" class="card-product__link">В корзину</a>
+                            </div>
+                        </div>
+                        <div class="card-product">
+                            <div class="card-product__image">
+                                <img src="./assets/images/product 3.png" alt="">
+                            </div>
+                            <div class="card-product__content">
+
+                                <div class="card-product__mark">Кристалл</div>
+                                <div class="card-product__title">Красивый камушек</div>
+                                <div class="card-product__subtitle">Ваша информация о товаре</div>
+                                <div class="card-product__price">20 000 руб</div>
+                                <a href="" class="card-product__link">В корзину</a>
+                            </div>
+                        </div>
+                        <div class="card-product">
+                            <div class="card-product__image">
+                                <img src="./assets/images/product 4.png" alt="">
+                            </div>
+                            <div class="card-product__content">
+
+                                <div class="card-product__mark">Кристалл</div>
+                                <div class="card-product__title">Адамантит</div>
+                                <div class="card-product__subtitle">Ваша информация о товаре</div>
+                                <div class="card-product__price">12 000 руб</div>
+                                <a href="" class="card-product__link">В корзину</a>
+                            </div>
+                        </div>
+                        <div class="card-product">
+                            <div class="card-product__image">
+                                <img src="./assets/images/product 5.png" alt="">
+                            </div>
+                            <div class="card-product__content">
+
+                                <div class="card-product__mark">Кристалл</div>
+                                <div class="card-product__title">Мистифрил</div>
+                                <div class="card-product__subtitle">Ваша информация о товаре</div>
+                                <div class="card-product__price">22 500 руб</div>
+                                <a href="" class="card-product__link">В корзину</a>
+                            </div>
+                        </div>
+                        <div class="card-product">
+                            <div class="card-product__image">
+                                <img src="./assets/images/product 6.png" alt="">
+                            </div>
+                            <div class="card-product__content">
+
+                                <div class="card-product__mark">Кристалл</div>
+                                <div class="card-product__title">Ледяной Дракоша</div>
+                                <div class="card-product__subtitle">Ваша информация о товаре</div>
+                                <div class="card-product__price">20 000 руб</div>
+                                <a href="" class="card-product__link">В корзину</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="products__grid">
+                        <div class="card-product">
+                            <div class="card-product__image">
+                                <img src="https://8jewel.ru/wp-content/uploads/2019/09/fe7514f8abb1f5db4b21ce17eaad-ukrasheniya-koltsa-muzhskoe-serebryanoe-koltso-demon.jpg"
+                                    alt="">
+                            </div>
+                            <div class="card-product__content">
+
+                                <div class="card-product__mark">Украшения</div>
+                                <div class="card-product__title">кольцо демона</div>
+                                <div class="card-product__subtitle">Ваша информация о товаре</div>
+                                <div class="card-product__price">23 000 руб</div>
+                                <a href="" class="card-product__link">В корзину</a>
+                            </div>
+                        </div>
+                        <div class="card-product">
+                            <div class="card-product__image">
+                                <img src="https://s.alicdn.com/@sc04/kf/H37d5716688bc42249e41c211fc3db193Z.jpg_300x300.jpg"
+                                    alt="">
+                            </div>
+                            <div class="card-product__content">
+
+                                <div class="card-product__mark">Украшения</div>
+                                <div class="card-product__title">браслет водяного</div>
+                                <div class="card-product__subtitle">Ваша информация о товаре</div>
+                                <div class="card-product__price">6 500 руб</div>
+                                <a href="" class="card-product__link">В корзину</a>
+                            </div>
+                        </div>
+                        <div class="card-product">
+                            <div class="card-product__image">
+                                <img src="https://veselaya-zateya.ru/upload/resize_cache/webp/iblock/a36/14erizi5fadxzqza0e6fu69s2s1y5umy.webp"
+                                    alt="">
+                            </div>
+                            <div class="card-product__content">
+
+                                <div class="card-product__mark">Украшения</div>
+                                <div class="card-product__title">изумрудная ведьма</div>
+                                <div class="card-product__subtitle">Ваша информация о товаре</div>
+                                <div class="card-product__price">2 311 руб</div>
+                                <a href="" class="card-product__link">В корзину</a>
+                            </div>
+                        </div>
+                        <div class="card-product">
+                            <div class="card-product__image">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCNtJlYWm206JRKzxj6kr2UOnRcBaqI-PxpZ4dPvQ1JQ&s"
+                                    alt="">
+                            </div>
+                            <div class="card-product__content">
+
+                                <div class="card-product__mark">украшения</div>
+                                <div class="card-product__title">кольцо баби яги</div>
+                                <div class="card-product__subtitle">Ваша информация о товаре</div>
+                                <div class="card-product__price">12 000 руб</div>
+                                <a href="" class="card-product__link">В корзину</a>
+                            </div>
+                        </div>
+                        <div class="card-product">
+                            <div class="card-product__image">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQhC-dBqQhWk8-Pc4gj6Jf8qeBbdMWuXmoEdEGlJ5abw&s"
+                                    alt="">
+                            </div>
+                            <div class="card-product__content">
+
+                                <div class="card-product__mark">украшения</div>
+                                <div class="card-product__title">фигурка водяного</div>
+                                <div class="card-product__subtitle">Ваша информация о товаре</div>
+                                <div class="card-product__price">2 500 руб</div>
+                                <a href="" class="card-product__link">В корзину</a>
+                            </div>
+                        </div>
+                        <div class="card-product">
+                            <div class="card-product__image">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSg29WSt_tMdGiRQhW1bhMZfUuwGyQ2L0_35pZY_-CHNw&s"
+                                    alt="">
+                            </div>
+                            <div class="card-product__content">
+
+                                <div class="card-product__mark">украшения</div>
+                                <div class="card-product__title">изба бабы яги</div>
+                                <div class="card-product__subtitle">Ваша информация о товаре</div>
+                                <div class="card-product__price">20000 0000 руб</div>
+                                <a href="" class="card-product__link">В корзину</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="products__grid">
+                        <div class="card-product">
+                            <div class="card-product__image">
+                                <img src="data:image/jpeg;base64,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"
+                                    alt="">
+                            </div>
+                            <div class="card-product__content">
+
+                                <div class="card-product__mark">палочки</div>
+                                <div class="card-product__title">волшебная палочка</div>
+                                <div class="card-product__subtitle">Ваша информация о товаре</div>
+                                <div class="card-product__price">4 500 руб</div>
+                                <a href="" class="card-product__link">В корзину</a>
+                            </div>
+                        </div>
+                        <div class="card-product">
+                            <div class="card-product__image">
+                                <img src="https://ir-1.ozone.ru/s3/multimedia-f/c1000/6400981947.jpg" alt="">
+                            </div>
+                            <div class="card-product__content">
+
+                                <div class="card-product__mark">палочка</div>
+                                <div class="card-product__title">палочки для суши</div>
+                                <div class="card-product__subtitle">Ваша информация о товаре</div>
+                                <div class="card-product__price">500 руб</div>
+                                <a href="" class="card-product__link">В корзину</a>
+                            </div>
+                        </div>
+                        <div class="card-product">
+                            <div class="card-product__image">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-VMHZDsZxvLawXRQPO9MgM01UwzIXJhIIfu6vH1nLIg&s"
+                                    alt="">
+                            </div>
+                            <div class="card-product__content">
+
+                                <div class="card-product__mark">палочка</div>
+                                <div class="card-product__title">палочка драко малфоя</div>
+                                <div class="card-product__subtitle">Ваша информация о товаре</div>
+                                <div class="card-product__price">900 000 руб</div>
+                                <a href="" class="card-product__link">В корзину</a>
+                            </div>
+                        </div>
+                        <div class="card-product">
+                            <div class="card-product__image">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCMyg9JvOPE8uHc2i01DLZkhCYsMYCsbkIsdgMltGZWw&s"
+                                    alt="">
+                            </div>
+                            <div class="card-product__content">
+
+                                <div class="card-product__mark">палочка</div>
+                                <div class="card-product__title">палочка дамблдора</div>
+                                <div class="card-product__subtitle">Ваша информация о товаре</div>
+                                <div class="card-product__price">120 000 000 руб</div>
+                                <a href="" class="card-product__link">В корзину</a>
+                            </div>
+                        </div>
+                        <div class="card-product">
+                            <div class="card-product__image">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQF0ZRLo7QCiSDSNa4dnfSoRCmQGOezeHM3AirLYJfTDg&s"
+                                    alt="">
+                            </div>
+                            <div class="card-product__content">
+
+                                <div class="card-product__mark">палочка</div>
+                                <div class="card-product__title">палочка гермионы</div>
+                                <div class="card-product__subtitle">Ваша информация о товаре</div>
+                                <div class="card-product__price">22 580 009 руб</div>
+                                <a href="" class="card-product__link">В корзину</a>
+                            </div>
+                        </div>
+                        <div class="card-product">
+                            <div class="card-product__image">
+                                <img src="https://avatars.mds.yandex.net/get-mpic/4519356/img_id3485616814357330116.jpeg/orig"
+                                    alt="">
+                            </div>
+                            <div class="card-product__content">
+
+                                <div class="card-product__mark">палочка</div>
+                                <div class="card-product__title">палочка гарри поттера</div>
+                                <div class="card-product__subtitle">Ваша информация о товаре</div>
+                                <div class="card-product__price">20 000 000 000 руб</div>
+                                <a href="" class="card-product__link">В корзину</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="seo" class="seo">
+        <div class="container">
+            <div class="seo__inner">
+
+                <div class="seo__content">
+
+                    <div class="seo__head">
+
+                        <div class="seo__icon">
+                            <img src="./assets/images/Star 2.svg">
+                        </div>
+                        <div class="seo__title">Новая коллекция волшебных палочек</div>
+                    </div>
+                    <div class="seo__info">Сложно сказать, почему акционеры крупнейших компаний призывают
+                        нас к новым
+                        свершениям, которые, в свою очередь, должны быть заблокированы в рамках своих
+                        собственных
+                        рациональных ограничений.<br><br>
+                        Принимая во внимание показатели успешности, граница обучения кадров предопределяет
+                        высокую
+                        востребованность направлений прогрессивного развития
+                    </div>
+
+                    <a href="" class="seo__link">Ознакомиться</a>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="component-content">
+        <div class="container">
+            <div class="component-content__inner">
+                <div class="component-content__image">
+                    <img src="./assets/images/Group 210.png" alt="">
+                </div>
+                <div class="component-content__info">
+                    <div class="component-content__title">Мои помошники</div>
+                    <div class="component-content__description">Значимость этих проблем настолько очевидна,
+                        что базовый
+                        вектор
+                        развития позволяет оценить значение экспериментов, поражающих по своей масштабности
+                        и
+                        грандиозности.
+                        Мы вынуждены отталкиваться от того, что консультация с широким активом.
+
+                    </div>
+                    <div class="component-content__avatars">
+                        <div component-content__avatar><img src="./assets/images/Ellipse 30.png" alt="">
+                        </div>
+                        <div component-content__avatar><img src="./assets/images/Ellipse 31.jpg" alt="">
+                        </div>
+                        <div component-content__avatar><img src="./assets/images/Ellipse 32.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer" class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__info">
+                    <a href="" class="footer-logotype">
+                        <img src="./assets/images/Frame 85 (1).svg" alt="">
+                    </a>
+                    <div class="field field-info">
+                        <div class="field__title">+7 (999) 999-99-99</div>
+                        <div class="field__subtitle">Мастерская</div>
+                    </div>
+                </div>
+                <div class="footer__menu">
+                    <ul class="menu">
+                        <li class="menu__title">Товары</li>
+                        <li class="menu__subtitle">Палочки</li>
+                        <li class="menu__subtitle">Кристаллы</li>
+                        <li class="menu__subtitle">Украшения</li>
+                    </ul>
+                    <ul class="menu">
+                        <li class="menu__title">О нас</li>
+                        <li class="menu__subtitle">Производители</li>
+                        <li class="menu__subtitle">Помошники</li>
+                    </ul>
+                </div>
+                <div class="footer__more">
+                    <div class="footer__socials">
+                        <a href="" class="social">
+                            <img src="./assets/images/facebook.svg" alt="">
+                        </a>
+                        <a href="" class="social">
+                            <img src="./assets/images/instagram.svg" alt="">
+                        </a>
+                        <a href="" class="social">
+                            <img src="./assets/images/youtube.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="copyright">
+                        Лавка.Чародея<br>
+                        All rights reserved
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="./assets/scripts/script.js"></script>
+
+</body>
+
+</html>
